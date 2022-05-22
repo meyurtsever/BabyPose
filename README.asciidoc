@@ -1,8 +1,8 @@
 = About the project
 
-* This project aims to have a better understanding of the general opinion about Turkey in the r/europe subreddit by performing sentiment analysis on comments crawled from related subreddit.
+* The goal of this research is to assist new parents by addressing pose-based real-time body movements of babies (such as arching back, headbanging, kicking legs, rubbing eyes, stretching, sucking fingers) and making sense of their activities.
 
-* This serves as the final project for BTM553 Advanced Techniques in Text Processing and Analysis.
+* Three HPE (Human Pose Estimation) models are used and these models are compared in terms of deep learning evaluations.
 
 == The dataset
 
