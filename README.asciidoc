@@ -1,0 +1,35 @@
+= About the project
+
+* This project aims to have a better understanding of the general opinion about Turkey in the r/europe subreddit by performing sentiment analysis on comments crawled from related subreddit.
+
+* This serves as the final project for BTM553 Advanced Techniques in Text Processing and Analysis.
+
+== The dataset
+
+* The dataset consists of 145 video clips for six different activity classes: arching back, sucking fingers, stretching, kicking legs, rubbing eye and headbanging.
+
+** Crawled from video sharing platforms such as YouTube, TikTok, etc.
+
+* These video clips are fed to HPE (Human Pose Estimation) models such as https://github.com/CMU-Perceptual-Computing-Lab/openpose[OpenPose, role=external,window=_blank], https://github.com/MVIG-SJTU/AlphaPose/tree/pytorch[AlphaPose, role=external,window=_blank], and https://github.com/wmcnally/kapao[KAPAO, role=external,window=_blank].
+
+** These coordinate outputs of body parts are normalized, preprocessed, and used in the deep learning model to predict activities.
+
+== Data pre-processing
+
+* JSON/CSV outputs of HPE models have excess information for our application.
+
+* For pre-processing, extracting only x and y coordinates of detected body parts is necessary for our deep learning model.
+
+* Pre-processing steps for:
+
+** AlphaPose https://github.com/meyurtsever/BabyPose/blob/main/alphapose/1_json_to_txt_alphaPose.ipynb[-> (1_json_to_txt_alphaPose.ipynb),role=external,window=_blank]
+
+** KAPAO https://github.com/meyurtsever/BabyPose/blob/main/kapao/1_json_to_txt_kapao.ipynb[-> (1_json_to_txt_kapao.ipynb),role=external,window=_blank]
+
+** OpenPose https://github.com/meyurtsever/BabyPose/blob/main/openpose/1_json_to_txt_openpose.ipynb[-> (1_json_to_txt_openpose.ipynb),role=external,window=_blank]
+
+* Finally, pre-processed HPE outputs are put together to create train and test datasets (See merge_all_txt notebooks for each HPE model).
+
+== All of the steps for the OpenPose HPE
+
+image::figures/openpose.png[]
