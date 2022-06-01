@@ -32,4 +32,4 @@
 
 == All of the steps for the OpenPose HPE
 
-image::figures/openpose.png[]
+image::figures/proposed_arch.png[]
