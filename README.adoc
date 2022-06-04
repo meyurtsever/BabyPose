@@ -124,7 +124,7 @@ python alphapose/predict_activity_alphapose.py -i demo/baby_stretching.mp4
 
 == Install KAPAO HPE
 
-* Create virtual environment for AlphaPose
+* Create virtual environment for KAPAO
 [source,bash]
 ----
 conda create -n kapao python=3.6
@@ -136,6 +136,7 @@ conda activate kapao
 ** `cd kapao` + 
 `pip install -r requirements.txt`
 ** Torch is excluded from `requirements.txt`
+** Get the right one for your system https://pytorch.org/get-started/previous-versions/[from here.,role=external,window=_blank]
 
 === Inference with KAPAO
 
